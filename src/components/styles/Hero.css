@@ -1,0 +1,175 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray-950: #2c2830;
+  --gray-700: #837d88;
+  --gray-200: #dadada;
+  --gray-50: #fafafa;
+  --blue-950: #2d2641;
+  --blue-500: #96a9c6;
+  --pink-400: #c396c6;
+  --purple-500: #9e96c6;
+  --main-font: "DM Serif Display", serif;
+  --secondary-font: "Karla", sans-serif;
+}
+
+.hero-img {
+  position: relative;
+  width: 100%;
+  height: 451px;
+  overflow: hidden;
+}
+
+.hero-img--desktop {
+  display: none;
+}
+
+.hero-content {
+  position: relative;
+  background-color: var(--blue-950);
+  color: var(--gray-50);
+  padding: 93px 24px;
+  text-align: center;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-content::before,
+.hero-content::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.hero-content::before {
+  top: 0;
+  left: 0;
+  width: 168px;
+  height: 165px;
+  background-image: url("/backgrounds/bg-pattern-intro-left-mobile.svg");
+}
+
+.hero-content::after {
+  right: 0;
+  bottom: -186px;
+  width: 130px;
+  height: 330px;
+  background-image: url("/backgrounds/bg-pattern-intro-right-mobile.svg");
+}
+
+.hero-btn {
+  margin-top: 16px;
+  width: 160px;
+  padding: 12.5px 24px;
+
+  background: var(--blue-950);
+  border: 2px solid var(--gray-50);
+  color: var(--gray-700);
+
+  font-family: var(--secondary-font);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 115%;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: var(--gray-50);
+  color: var(--gray-950);
+}
+
+@media (min-width: 768px) {
+  .hero-img {
+    height: 451px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    background-color: var(--blue-950);
+    position: relative;
+  }
+
+  .hero::before {
+    content: "";
+    background: url("/backgrounds/bg-pattern-intro-left-desktop.svg");
+    height: 649px;
+    width: 300px;
+    left: 0;
+    bottom: -410px;
+    z-index: 1;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+
+  .hero::after {
+    content: "";
+    background: url("/backgrounds/bg-pattern-intro-right-desktop.svg");
+    height: 649px;
+    width: 400px;
+    right: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+
+  .hero-wrapper {
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+  }
+
+  .hero-img--mobile {
+    display: none;
+  }
+
+  .hero-img--desktop {
+    display: block;
+    position: absolute;
+    top: 105px;
+    right: 24px;
+    width: 440px;
+    height: 550px;
+    z-index: 1;
+  }
+
+  .hero-content {
+    grid-column: 1 / 2;
+    align-self: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-content::before,
+  .hero-content::after {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-wrapper {
+    max-width: 1640px;
+    margin: 0 auto;
+    width: 100vw;
+  }
+
+  .hero-content {
+    margin-left: 145px;
+  }
+
+  .hero-img--desktop {
+    width: 540px;
+    height: 650px;
+    right: 12%;
+    z-index: 1;
+  }
+}

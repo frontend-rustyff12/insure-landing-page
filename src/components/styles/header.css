@@ -30,23 +30,38 @@ header {
 
 .mobile-nav img {
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   right: 24px;
   top: 24px;
+}
+
+.mobile-nav.open img {
+  right: 24px;
+  top: -56px;
 }
 
 .mobile-nav.open {
   position: absolute;
   left: 0;
   top: 80px;
-  height: calc(100vh - 80px);
+  height: 100vh;
   width: 100%;
   padding: 40px 24px;
-  background-color: var(--blue-950);
-  background-image: url("/backgrounds/bg-pattern-mobile-nav.svg");
+  background-color: var(--gray-950);
+  z-index: 1;
+}
+
+.mobile-nav.open::after {
+  position: absolute;
+  content: "";
+  background: url("/backgrounds/bg-pattern-mobile-nav.svg");
   background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain;
+  background-size: cover;
+  height: 320px;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
 }
 
 .nav-items {
