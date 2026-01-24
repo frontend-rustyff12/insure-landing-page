@@ -48,53 +48,60 @@ export default function Header({ data }: HeaderProps) {
 
   return (
     <header>
-      <Image src="/logo.svg" height={18} width={112} alt="Logo" />
+      <div className="header-wrapper">
+        <Image src="/logo.svg" height={18} width={112} alt="Logo" />
 
-      {/* Desktop Nav */}
-      {isDesktop && (
-        <nav className="desktop-nav">
-          <ul>
-            {data.map((item) => (
-              <li key={item.id}>
-                <a className={`${item.id === 4 ? "btn" : ""} nav-link`} href="">
-                  {item.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
-
-      {/* Mobile Nav */}
-      {!isDesktop && (
-        <nav className={`mobile-nav ${isMenuOpen ? "open" : ""}`}>
-          <Image
-            src={
-              isMenuOpen ? "/icons/icon-close.svg" : "/icons/icon-hamburger.svg"
-            }
-            height={32}
-            width={32}
-            alt="Menu toggle"
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-          />
-
-          {isMenuOpen && (
-            <ul className="nav-items open">
+        {/* Desktop Nav */}
+        {isDesktop && (
+          <nav className="desktop-nav">
+            <ul>
               {data.map((item) => (
                 <li key={item.id}>
                   <a
                     className={`${item.id === 4 ? "btn" : ""} nav-link`}
                     href=""
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </a>
                 </li>
               ))}
             </ul>
-          )}
-        </nav>
-      )}
+          </nav>
+        )}
+
+        {/* Mobile Nav */}
+        {!isDesktop && (
+          <nav className={`mobile-nav ${isMenuOpen ? "open" : ""}`}>
+            <Image
+              src={
+                isMenuOpen
+                  ? "/icons/icon-close.svg"
+                  : "/icons/icon-hamburger.svg"
+              }
+              height={32}
+              width={32}
+              alt="Menu toggle"
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+            />
+
+            {isMenuOpen && (
+              <ul className="nav-items open">
+                {data.map((item) => (
+                  <li key={item.id}>
+                    <a
+                      className={`${item.id === 4 ? "btn" : ""} nav-link`}
+                      href=""
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </nav>
+        )}
+      </div>
     </header>
   );
 }

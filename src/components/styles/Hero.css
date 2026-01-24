@@ -157,19 +157,15 @@
 
 @media screen and (min-width: 1440px) {
   .hero-wrapper {
-    max-width: 1640px;
+    max-width: 1440px;
     margin: 0 auto;
     width: 100vw;
-  }
-
-  .hero-content {
-    margin-left: 145px;
   }
 
   .hero-img--desktop {
     width: 540px;
     height: 650px;
-    right: 12%;
+    right: 20px;
     z-index: 1;
   }
 }

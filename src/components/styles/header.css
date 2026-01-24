@@ -12,14 +12,15 @@
   --main-font: "DM Serif Display", serif;
   --secondary-font: "Karla", sans-serif;
 }
-
 header {
+  height: 80px;
+  width: 100%;
+}
+.header-wrapper {
   padding: 32px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
-  width: 100%;
 }
 
 .desktop-nav ul li,
@@ -78,5 +79,11 @@ header {
 @media screen and (min-width: 1024px) {
   .desktop-nav ul {
     display: flex;
+  }
+
+  .header-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100vw;
   }
 }
