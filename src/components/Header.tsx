@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import "@/components/styles/header.css";
+import "@/components/styles/Header.css";
 
 type HeaderItem = {
   id: number;

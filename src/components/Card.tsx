@@ -1,12 +1,18 @@
 import Image from "next/image";
-export default function Card() {
+export default function Card({
+  title,
+  text,
+  image,
+}: {
+  title: string;
+  text: string;
+  image: string;
+}) {
   return (
     <article className="card">
-      <h3>Snappy Process</h3>
-      <p>
-        Our application process can be completed in minutes, not hours.
-        Don&appos;t get stuck filling in tedious forms.
-      </p>
+      <Image src={image} width={86} height={86} alt="" />
+      <h3>{title}</h3>
+      <p>{text}</p>
     </article>
   );
 }

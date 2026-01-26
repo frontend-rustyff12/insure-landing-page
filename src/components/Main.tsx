@@ -1,7 +1,31 @@
-export default function Main() {
+import Card from "./Card";
+import "./styles/Main.css";
+
+type MainItem = {
+  title: string;
+  text: string;
+  image: string;
+};
+
+type MainProps = {
+  data: MainItem[];
+};
+export default function Main({ data }: MainProps) {
   return (
-    <section className="main-content">
-      <h3>We're different</h3>
-    </section>
+    <div className="main-content">
+      <div className="main-wrapper">
+        <h3>We're different</h3>
+        <section className="card-container">
+          {data.map((item, index) => (
+            <Card
+              key={index}
+              title={item.title}
+              text={item.text}
+              image={item.image}
+            />
+          ))}
+        </section>
+      </div>
+    </div>
   );
 }
