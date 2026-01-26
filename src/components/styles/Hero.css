@@ -168,4 +168,17 @@
     right: 20px;
     z-index: 1;
   }
+
+  .hero-content h1 {
+    position: relative;
+  }
+
+  .hero-content h1::before {
+    position: absolute;
+    content: "";
+    background-color: var(--gray-50);
+    height: 1px;
+    width: 20%;
+    top: -64px;
+  }
 }
