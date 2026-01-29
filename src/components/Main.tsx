@@ -1,4 +1,5 @@
 import Card from "./Card";
+import Cta from "./Cta";
 import "./styles/Main.css";
 
 type MainItem = {
@@ -26,6 +27,7 @@ export default function Main({ data }: MainProps) {
           ))}
         </section>
       </div>
+      <Cta />
     </div>
   );
 }

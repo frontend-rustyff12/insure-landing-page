@@ -55,9 +55,40 @@
   margin-bottom: 16px;
 }
 
+.cta {
+  width: 100%;
+  background: var(--blue-950);
+  padding: 72px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-top: 140px;
+}
+
+.cta::after {
+  content: "";
+  position: absolute;
+  background: url("/backgrounds/bg-pattern-how-we-work-mobile.svg");
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
 @media screen and (min-width: 768px) {
-  .main-content {
-    padding: 140px 148px;
+  .main-wrapper {
+    padding: 40px 148px;
+  }
+
+  .cta {
+    margin-top: 120px;
+  }
+
+  .cta-content {
+    max-width: 342px;
   }
 }
 
@@ -65,9 +96,11 @@
   .main-content {
     padding-top: 305px;
   }
+
   .main-wrapper {
     align-items: start;
     padding-top: 64px;
+    padding: 40px 0px;
   }
 
   .main-wrapper h2::before {
@@ -79,11 +112,40 @@
   .card-container {
     flex-direction: row;
     gap: 32px;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .card {
     align-items: start;
     text-align: left;
+  }
+
+  .cta {
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+
+  .cta-content {
+    max-width: 950px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    text-align: start;
+  }
+
+  .cta::after {
+    content: "";
+    position: absolute;
+    background: url("/backgrounds/bg-pattern-how-we-work-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 
