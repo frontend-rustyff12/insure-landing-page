@@ -1,4 +1,6 @@
 import Image from "next/image";
+import "./styles/Main.css";
+
 export default function Card({
   title,
   text,

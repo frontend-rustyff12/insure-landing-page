@@ -14,7 +14,7 @@ export default function Main({ data }: MainProps) {
   return (
     <div className="main-content">
       <div className="main-wrapper">
-        <h3>We're different</h3>
+        <h2>We're different</h2>
         <section className="card-container">
           {data.map((item, index) => (
             <Card
