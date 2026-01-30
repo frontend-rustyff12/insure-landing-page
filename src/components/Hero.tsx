@@ -2,12 +2,17 @@ import Image from "next/image";
 
 import "./styles/Hero.css";
 
-type HeroProps = {
+type HeroItem = {
   heading: string;
   text: string;
 };
 
-export default function Hero({ heading, text }: HeroProps) {
+type HeroProps = {
+  data: HeroItem;
+};
+
+export default function Hero({ data }: HeroProps) {
+  const { heading, text } = data;
   return (
     <section className="hero">
       <div className="hero-wrapper">
