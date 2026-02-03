@@ -1,4 +1,6 @@
 import Image from "next/image";
+import "./styles/Footer.css";
+
 type SocialItem = {
   name: string;
   link: string;
@@ -8,10 +10,10 @@ type SocialItem = {
 
 type FooterDataItem = {
   title: string;
-  data: Data[];
+  dataEntry: DataEntry[];
 };
 
-type Data = {
+type DataEntry = {
   name: string;
   link: string;
 };
@@ -22,6 +24,10 @@ type FooterProps = {
 };
 
 export default function Footer({ data, social }: FooterProps) {
+  const first = data[0].dataEntry.map((item, index) => (
+    <div key={index}>{item.name}</div>
+  ));
+  console.log(data[0].dataEntry);
   return (
     <footer>
       <div className="footer-wrapper">
@@ -35,7 +41,9 @@ export default function Footer({ data, social }: FooterProps) {
             ))}
           </div>
         </div>
-        <div className="footer-bottom">{/*  */}</div>
+        <div className="footer-bottom">
+          <div className="link-container">{first}</div>
+        </div>
       </div>
     </footer>
   );

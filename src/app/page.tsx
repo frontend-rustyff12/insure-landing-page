@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Main from "@/components/Main";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 import { headerData } from "@/content/Header";
 import { heroData } from "@/content/Hero";
 import { mainData } from "@/content/Main";
@@ -15,7 +15,7 @@ export default function Home() {
         <Hero data={heroData} />
         <Main data={mainData} />
       </main>
-      <Footer data={footerData} social={socialData} />
+      {/* <Footer data={footerData} social={socialData} /> */}
     </div>
   );
 }

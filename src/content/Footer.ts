@@ -33,7 +33,7 @@ export const socialData = [
 export const footerData = [
   {
     title: "our company",
-    data: [
+    dataEntry: [
       { name: "how we work", link: "#" },
       { name: "why insure?", link: "#" },
       { name: "check price", link: "#" },
@@ -42,7 +42,7 @@ export const footerData = [
   },
   {
     title: "Help Me",
-    data: [
+    dataEntry: [
       { name: "faq", link: "#" },
       { name: "terms of use", link: "#" },
       { name: "privacy policy", link: "#" },
@@ -51,7 +51,7 @@ export const footerData = [
   },
   {
     title: "contact",
-    data: [
+    dataEntry: [
       { name: "sales", link: "#" },
       { name: "support", link: "#" },
       { name: "live chat", link: "#" },
@@ -59,7 +59,7 @@ export const footerData = [
   },
   {
     title: "others",
-    data: [
+    dataEntry: [
       { name: "careers", link: "#" },
       { name: "press", link: "#" },
       { name: "licenses", link: "#" },

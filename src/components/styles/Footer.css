@@ -1,0 +1,17 @@
+footer {
+  padding: 84px 24px;
+  background-color: brown;
+}
+
+.footer-wrapper {
+  background-color: blue;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  padding-bottom: 40px;
+  background-color: cadetblue;
+}
