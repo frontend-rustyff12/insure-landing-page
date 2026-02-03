@@ -1,9 +1,26 @@
 import React from "react";
 
-export default function FooterLinkItem() {
+type FooterLink = {
+  name: string;
+  link: string;
+};
+
+type FooterLinkItemProps = {
+  title: string;
+  items: FooterLink[];
+};
+
+export default function FooterLinkItem({ title, items }: FooterLinkItemProps) {
   return (
-    <div>
-      <ul></ul>
+    <div className="link-container">
+      <h5>{title}</h5>
+      <ul>
+        {items.map((item, index) => (
+          <li key={index}>
+            <a href={item.link}>{item.name}</a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

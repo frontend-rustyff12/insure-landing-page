@@ -95,6 +95,7 @@
 @media screen and (min-width: 1024px) {
   .main-content {
     padding-top: 305px;
+    padding-bottom: 0;
   }
 
   .main-wrapper {
@@ -127,7 +128,8 @@
   }
 
   .cta-content {
-    max-width: 950px;
+    max-width: unset;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -150,6 +152,16 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .cta {
+    max-width: 1110px;
+    padding: 48px 0px;
+    margin: 70px auto;
+  }
+
+  .cta-content {
+    width: 950px;
+  }
+
   .main-wrapper {
     max-width: 1110px;
     margin: 0 auto;
