@@ -15,8 +15,8 @@ export default function FooterLinkItem({ title, items }: FooterLinkItemProps) {
     <div className="link-container">
       <h5>{title}</h5>
       <ul>
-        {items.map((item, index) => (
-          <li key={index}>
+        {items.map((item) => (
+          <li key={item.name}>
             <a href={item.link}>{item.name}</a>
           </li>
         ))}

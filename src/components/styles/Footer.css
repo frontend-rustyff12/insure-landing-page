@@ -1,22 +1,19 @@
-:root {
-  --white: #ffffff;
-  --black: #000000;
-  --gray-950: #2c2830;
-  --gray-700: #837d88;
-  --gray-200: #dadada;
-  --gray-50: #fafafa;
-  --blue-950: #2d2641;
-  --blue-500: #96a9c6;
-  --pink-400: #c396c6;
-  --purple-500: #9e96c6;
-  --main-font: "DM Serif Display", serif;
-  --secondary-font: "Karla", sans-serif;
-}
-
 footer {
   padding: 84px 24px;
   background-color: var(--gray-50);
-  /* background-color: brown; */
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  background: url("/backgrounds/bg-pattern-footer-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 
 .footer-top {
@@ -27,9 +24,22 @@ footer {
   padding-bottom: 40px;
 }
 
+.footer-top img {
+  z-index: 5;
+}
+
 .socials-container {
   display: flex;
   gap: 16px;
+  z-index: 5;
+}
+
+.socials-container a img {
+  transition: all 0.5s ease;
+}
+
+.socials-container a:hover img {
+  filter: brightness(0);
 }
 
 .footer-bottom,
@@ -93,6 +103,15 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  footer::before {
+    background: url("/backgrounds/bg-pattern-footer-desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 500px;
+    left: 0;
+    top: 0;
+  }
   .footer-bottom {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
